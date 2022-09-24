@@ -10,11 +10,11 @@ type Props = {
 
 const VideoCard = ({ video }: Props) => {
     return (
-        <Card sx={{ width: { md: '320px', xs: '100%' }, boxShadow: 'none', borderRadius: 0 }}>
+        <Card sx={{ width: { xs: '100%', sm: '358px', md: '320px' }, boxShadow: 'none', borderRadius: 0 }}>
             <Link to={video.id.videoId ? `/video/${video.id.videoId}` : demoVideoUrl}>
                 <CardMedia 
                     image={video.snippet?.thumbnails?.high?.url}
-                    sx={{ width: 358, height: 180 }}
+                    sx={{ width: { xs: "100%", sm: '358px', md: '320px' }, height: 180 }}
                 />
             </Link>
             

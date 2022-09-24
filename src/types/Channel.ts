@@ -25,6 +25,9 @@ export type Channel = {
             high: { height: number, url: string, width: number },
             medium: { height: number, url: string, width: number }
         }
+        channelId: string,
+        channelTitle: string,
+        likeCount: string,
         title: string
     },
     statistics: {

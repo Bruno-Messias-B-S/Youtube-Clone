@@ -9,7 +9,7 @@ const NavBar = () => (
     <Stack 
         direction="row" 
         alignItems="center" 
-        p={2} 
+        p={{ xs:2, md:2 }} 
         sx={{ position: "stick", background: "#000", top: 0, justifyContent: "space-between" }}
     >
         <Link to="/" style={{ display: "flex", alignItems: "center" }}>
