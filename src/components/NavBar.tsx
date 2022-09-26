@@ -12,7 +12,7 @@ const NavBar = () => (
         p={{ xs:2, md:2 }} 
         sx={{ position: "stick", background: "#000", top: 0, justifyContent: "space-between" }}
     >
-        <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <Link to="/" style={{ display: "flex", alignItems: "center", marginLeft: '-10px', marginRight: '6px' }}>
             <img src={logo} alt="logo" height={45}/>
         </Link>
 

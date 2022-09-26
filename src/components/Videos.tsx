@@ -9,7 +9,7 @@ type Props = {
 
 const Videos = ({ videos, direction }: Props) => {
     return (
-        <Stack direction={ direction || 'row' } flexWrap="wrap" justifyContent="start" gap={2}>
+        <Stack direction={ direction || 'row' } flexWrap="wrap" justifyContent="start" gap={2} style={{width: '100%'}}>
             {videos.map( ( item, index ) => (
                 <Box key={index}>
                     { item.id.videoId ? <VideoCard video={ item }/> : ''}
