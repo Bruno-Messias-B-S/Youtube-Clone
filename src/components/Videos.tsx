@@ -3,13 +3,13 @@ import { Video } from '../types/Video';
 import { VideoCard, ChannelCard } from './';
 
 type Props = {
-    videos: Video[]
-    direction: string
+    videos: Video[],
+    direction: any
 }
 
 const Videos = ({ videos, direction }: Props) => {
     return (
-        <Stack direction={ direction || 'row' } flexWrap="wrap" justifyContent="start" gap={2} style={{width: '100%'}}>
+        <Stack direction={ direction } flexWrap="wrap" justifyContent="start" gap={2} style={{width: '100%'}}>
             {videos.map( ( item, index ) => (
                 <Box key={index}>
                     { item.id.videoId ? <VideoCard video={ item }/> : ''}

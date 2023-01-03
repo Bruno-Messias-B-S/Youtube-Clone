@@ -1,5 +1,5 @@
 export type Video = {
-    id: { kind: string, videoId: string, channelId: string },
+    id: { videoId: string, channelId: string },
     kind: string,
     snippet: { 
         channelId: string,

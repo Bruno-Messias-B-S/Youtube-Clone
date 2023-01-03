@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import { demoProfilePicture } from '../utils/constants';
 
 type Props = {
-    channelDetail: Video,
-    channel: Channel,
-    marginTop: string
+    channelDetail?: Video,
+    channel?: Channel,
+    marginTop?: string
 }
 
 const channelDetail = ({ channelDetail, channel, marginTop }: Props) => (
@@ -29,7 +29,7 @@ const channelDetail = ({ channelDetail, channel, marginTop }: Props) => (
                 display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' 
             }}>
                 <CardMedia
-                    image={channelDetail.snippet?.thumbnails?.high?.url || demoProfilePicture }
+                    image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture }
                     sx={{ borderRadius: '50%', height: '180px', width: '180px', mb: 2, border: '1px solid #e3e3e3' }}
                 />
                 <Typography variant="h6">

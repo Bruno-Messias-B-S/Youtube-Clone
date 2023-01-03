@@ -1,5 +1,5 @@
 export type Channel = {
-    brandingSettings: {
+    brandingSettings?: {
         channel: {
             country: string,
             description: string,
@@ -9,7 +9,7 @@ export type Channel = {
         },
         image: { bannerExternalUrl: string }
     },
-    contentDetails: {
+    contentDetails?: {
         relatedPlaylists: { liked: string, uploads: string }
     },
     id: string,
@@ -27,13 +27,13 @@ export type Channel = {
         }
         channelId: string,
         channelTitle: string,
-        likeCount: string,
         title: string
     },
-    statistics: {
+    statistics?: {
         hiddenSubscriberCount: boolean,
         subscriberCount: string,
         videoCount: string,
-        viewCount: string
+        viewCount: string,
+        likeCount: string,
     }
 }

@@ -23,7 +23,6 @@ const VideoDetail = () => {
         fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
             .then((data) => setVideos(data.items));
     }, [ id ]);
-    console.log(videoDetail)
 
     return (
        <Box minHeight="95vh">
@@ -40,29 +39,31 @@ const VideoDetail = () => {
                     </Typography>
                     <Stack 
                         direction="row" 
-                        justifyContent="space-between" 
+                        justifyContent="space-between"
+                        alignItems={'center'}
                         sx={{ color: 'white' }}
                         py={1} px={2}
+                        height="10px"
                         >
                             <Link to={`/channel/${videoDetail?.snippet.channelId}`}>
-                                <Typography variant={{ sm: 'subtitle1', md: 'h6' }} color="white">
+                                <Typography variant={'subtitle1'} color="white">
                                     {videoDetail?.snippet.channelTitle}
                                     <CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }}/>
                                 </Typography>
                             </Link>
                             <Stack direction="row" gap="20px" alignItems="center">
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                                    {parseInt(videoDetail?.statistics.viewCount!).toLocaleString()} views
+                                    {parseInt(videoDetail?.statistics?.viewCount!).toLocaleString()} views
                                 </Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                                    {parseInt(videoDetail?.statistics.likeCount).toLocaleString()} likes
+                                    {parseInt(videoDetail?.statistics?.likeCount!).toLocaleString()} likes
                                 </Typography>
                             </Stack>
                     </Stack>
                 </Box>
             </Box>
             <Box px={2} py={{ md:1, xs: 5 }} justifyContent="center" alignItems="center">
-                <Videos videos={videos} direction="column"/>
+                <Videos videos={videos} direction='column'/>
             </Box>
         </Stack>
        </Box>
